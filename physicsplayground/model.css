@@ -1,0 +1,48 @@
+.hidden {
+    display: none;
+}
+
+#modal {
+    transition: opacity 0.3s ease;
+}
+div#modal {
+    width: 100%;
+    margin-top: -823px;
+    z-index: 5;
+}
+button#closeModalBtn {
+    float: right;
+    margin-top: -27px;
+    border: #212529;
+    background: #343a40;
+    color: #fff;
+    font-size: 39px;
+    padding: 1px 1px 1px 1px;
+}
+
+.col-sm-12.col-md-6 {
+    height: 870px;
+}
+
+@media only screen and (max-width: 768px) {
+    canvas#mainCanvas {
+        width: 337px !important;
+        height: 303px !important;
+    }
+    
+    div#menuWrapper {
+    width: 339px !important;
+}
+}
+
+@media only screen and (max-width: 520px) {
+   canvas#mainCanvas {
+    width: 338px !important;
+    height: 291px !important;
+}
+}
+
+
+
+
+

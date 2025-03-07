@@ -1,0 +1,96 @@
+#RewriteEngine on 
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [NC,L]
+
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# URL Rewrite Rules
+RewriteRule ^home/?$ index.php
+RewriteRule ^add-review/([^/\.]+)?$ review.php?slug=$1
+RewriteRule ^page/([^/\.]+)?$ index.php?page=$1
+
+RewriteRule ^register$ signup.php
+RewriteRule ^register-submit$ register-submit.php
+RewriteRule ^login$ signin.php
+RewriteRule ^login-submit$ login-submit.php
+RewriteRule ^user-profile$ user-profile.php
+RewriteRule ^user-update-profile$ user-update-profile.php
+RewriteRule ^user-update-password$ user-update-password.php
+RewriteRule ^forget-password$ forgot-password.php
+RewriteRule ^forget-password-submit$ forget-password-submit.php
+RewriteRule ^logout$ logout.php
+RewriteRule ^reset-password/([^/\.]+)?$ reset-password.php?token=$1 [L]
+RewriteRule ^reset-password/([a-f0-9]{32})/?$ reset-password.php [L]
+
+
+RewriteRule ^listing$ listing.php
+RewriteRule ^(puzzle-games)/?$ puzzle-games.php
+RewriteRule ^(fun-games)/?$ fun-games.php
+RewriteRule ^(board-games)/?$ board-games.php
+RewriteRule ^(sports-games)/?$ sports-games.php
+RewriteRule ^(arcade-games)/?$ arcade-games.php
+RewriteRule ^(shooter-games)/?$ shooter-games.php
+RewriteRule ^(card-games)/?$ card-games.php
+RewriteRule ^(racing-games)/?$ racing-games.php
+RewriteRule ^(privacy-policy)/?$ privacy-policy.php
+RewriteRule ^(terms-conditions)/?$ terms-conditions.php
+RewriteRule ^(disclaimer)/?$ disclaimer.php
+RewriteRule ^(contact-us)/?$ contact-us.php
+RewriteRule ^(about-us)/?$ about-us.php
+RewriteRule ^(blog)/?$ blog.php
+RewriteRule ^(games)/?$ games.php
+
+RewriteRule ^2048_tile/?$ 2048_tile/ [L]
+RewriteRule ^blackholesquare/?$ blackholesquare/ [L]
+RewriteRule ^doge2048/?$ doge2048/ [L]
+RewriteRule ^motox3m/?$ motox3m/ [L]
+RewriteRule ^physicsplayground/?$ physicsplayground/ [L]
+RewriteRule ^puzzle/?$ puzzle/ [L]
+RewriteRule ^aim_training/?$ aim_training/ [L]
+RewriteRule ^Ball_and_glass/?$ Ball_and_glass/ [L]
+RewriteRule ^bear_hunter_ninja/?$ bear_hunter_ninja/ [L]
+RewriteRule ^blast_zone/?$ blast_zone/ [L]
+RewriteRule ^brain_burst_game/?$ brain_burst_game/ [L]
+RewriteRule ^mastermind/?$ mastermind/ [L]
+RewriteRule ^clawCrane/?$ clawCrane/ [L]
+RewriteRule ^color_matching_application/?$ color_matching_application/ [L]
+RewriteRule ^beat_a_mole/?$ beat_a_mole/ [L]
+RewriteRule ^carnival/?$ carnival/ [L]
+RewriteRule ^uno_computer/?$ uno_computer/ [L]
+RewriteRule ^unlock_the_lock/?$ unlock_the_lock/ [L]
+RewriteRule ^underwater_shoot/?$ underwater_shoot/ [L]
+RewriteRule ^turn_on_the_light/?$ turn_on_the_light/ [L]
+RewriteRule ^trivia_It/?$ trivia_It/ [L]
+RewriteRule ^trihand_tactics/?$ trihand_tactics/ [L]
+RewriteRule ^treasure_hunt/?$ treasure_hunt/ [L]
+RewriteRule ^tower_building/?$ tower_building/ [L]
+
+# Blog Pages
+RewriteRule ^games/([^/\.]+)/?$ game-start.php?blog=$1
+
+# Error Handling
+ErrorDocument 404 /error/404.php
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.zettagame\.com [NC]
+RewriteRule ^(.*)$ https://zettagame.com/$1 [R=301,L]
+
+# Redirect http to https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://zettagame.com%{REQUEST_URI} [R=301,L]
+
+# Enable GZIP Compression for Faster Loading
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json
+</IfModule>
+
+# cPanel PHP Directives - Do Not Edit Manually
+<IfModule php7_module>
+   php_value error_reporting E_ALL & ~E_NOTICE & ~E_DEPRECATED
+</IfModule>
+<IfModule lsapi_module>
+   php_value error_reporting E_ALL & ~E_NOTICE & ~E_DEPRECATED
+</IfModule>

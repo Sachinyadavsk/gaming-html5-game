@@ -1,0 +1,42 @@
+.hidden {
+    display: none;
+}
+
+#modal {
+    transition: opacity 0.3s ease;
+}
+div#modal {
+    width: 100%;
+    margin-top: -440px;
+    z-index: 5;
+}
+button#closeModalBtn {
+    float: right;
+    margin-top: -27px;
+    border: #212529;
+    background: #343a40;
+    color: #fff;
+    font-size: 39px;
+    padding: 1px 1px 1px 1px;
+}
+
+.col-sm-12.col-md-6.mobile_game {
+    height: 511px;
+}
+
+.col-ms-6.mobiel_devices {
+    display: none;
+}
+
+.col-md-6.desk_lap_devices {
+    display: block;
+}
+
+@media screen and (max-width: 525px) {
+ .col-ms-6.mobiel_devices {
+    display: block;
+}
+.col-md-6.desk_lap_devices {
+    display: none;
+}
+}

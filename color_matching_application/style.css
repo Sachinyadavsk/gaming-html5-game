@@ -1,0 +1,62 @@
+.score-section, .target-color-section, .grid-section {
+    margin: 20px 0;
+}
+
+.color-box {
+    width: 68px;
+    height: 59px;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-left: 44%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    gap: 8px;
+    justify-content: center;
+}
+
+.color-cell {
+     width: 68px;
+    height: 59px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button.new_start_now {
+    margin-left: 34%;
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 85px);
+    gap: 6px;
+    justify-content: center;
+}
+}
+
+@media screen and (max-width: 525px) {
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 85px);
+    gap: 6px;
+    justify-content: center;
+}
+}
