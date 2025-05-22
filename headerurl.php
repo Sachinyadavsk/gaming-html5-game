@@ -26,11 +26,75 @@ if ((isset($_SERVER['HTTP_IF_NONE_MATCH']) && trim($_SERVER['HTTP_IF_NONE_MATCH'
      foreach($game_arr4 as $list){
          echo htmlspecialchars_decode($list['data']);
      }?>
+     
+      <?php
+    function zettagame_breadcrumbs() {
+        // Home URL
+        echo '<nav aria-label="breadcrumb">';
+        echo '<ul class="breadcrumb">';
+        echo '<li><a href="'.home_url().'">Home</a></li> &gt; ';
+    
+        if (is_category() || is_single()) {
+            $category = get_the_category();
+            if (!empty($category)) {
+                echo '<li><a href="'.get_category_link($category[0]->term_id).'">'.$category[0]->name.'</a></li> &gt; ';
+            }
+            if (is_single()) {
+                echo '<li>'.get_the_title().'</li>';
+            }
+        } elseif (is_page() && !is_front_page()) {
+            echo '<li>'.get_the_title().'</li>';
+        } elseif (is_search()) {
+            echo '<li>Search results for: "'.get_search_query().'"</li>';
+        } elseif (is_404()) {
+            echo '<li>404 - Page Not Found</li>';
+        }
+        
+        echo '</ul>';
+        echo '</nav>';
+    }
+    ?>
 <!-- main css -->
 <link rel="stylesheet" href="https://zettagame.com/assets/css/main.css">
-<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
 <meta property="og:url" content="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+<link rel="alternate" hreflang="en-us" href="https://zettagame.com/us/" />
+<link rel="alternate" hreflang="en-gb" href="https://zettagame.com/uk/" />
+<link rel="alternate" hreflang="en-in" href="https://zettagame.com/in/" />
+<link rel="alternate" hreflang="x-default" href="https://zettagame.com/" />
+<script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "VideoGame",
+                "name": "zettagame",
+                "author": {
+                  "@type": "Organization",
+                  "name": "zettagame"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "zettagame"
+                },
+                "genre": "Action-Adventure",
+                "url": "<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Pankaj"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.6",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "reviewBody": "GTA VI offers a vast open-world experience, stunning graphics, and deeply immersive storytelling. A solid upgrade from previous titles.",
+              "datePublished": "2025-03-09"
+            }
+        </script>
 <meta name="google-site-verification" content="AKKInmlx0DYDhngp984Zxtb4uKnzXuujoJ0rNUTH4bg" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BKZXB6DSF"></script>
@@ -54,11 +118,12 @@ if ((isset($_SERVER['HTTP_IF_NONE_MATCH']) && trim($_SERVER['HTTP_IF_NONE_MATCH'
   }
 }
 </script>
+
 <script>
        // Function to check and request notification permission
             function requestNotificationPermission() {
                 if (!("Notification" in window)) {
-                    alert("This browser does not support desktop notifications.");
+                    // alert("This browser does not support desktop notifications.");
                     return;
                 }
             
@@ -70,7 +135,7 @@ if ((isset($_SERVER['HTTP_IF_NONE_MATCH']) && trim($_SERVER['HTTP_IF_NONE_MATCH'
                         sendNotification();
                     } else if (permission === "denied") {
                         console.log("User blocked notifications.");
-                        alert("You have blocked notifications. To enable them, change settings in your browser.");
+                        // alert("You have blocked notifications. To enable them, change settings in your browser.");
                     }
                 });
             }

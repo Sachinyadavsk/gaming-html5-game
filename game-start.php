@@ -19,6 +19,39 @@
       <meta name="google-site-verification" content="AKKInmlx0DYDhngp984Zxtb4uKnzXuujoJ0rNUTH4bg" />
       <link rel="canonical" href="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
       <meta property="og:url" content="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+      
+      <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "VideoGame",
+                "name": "zettagame",
+                "author": {
+                  "@type": "Organization",
+                  "name": "zettagame"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "zettagame"
+                },
+                "genre": "Action-Adventure",
+                "url": "<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Pankaj"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.6",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "reviewBody": "GTA VI offers a vast open-world experience, stunning graphics, and deeply immersive storytelling. A solid upgrade from previous titles.",
+              "datePublished": "2025-03-09"
+            }
+        </script>
       <!-- #title -->
       <?php           
           include('confige.php');

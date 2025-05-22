@@ -1,3 +1,63 @@
+ <style>
+
+button {
+   float: right;
+    padding: 15px 11px;
+    margin-top: 0px;
+    margin-right: 14px;
+    font-size: 17px;
+    background: #39424d;
+    border-left: none;
+    cursor: pointer;
+}
+button:hover {
+  background: #ccc;
+}
+.search-container_mobile{
+    display:none;
+}
+.search-container input[type=text] {
+   padding: 9px;
+    /*border-radius: 5px;*/
+    background: #505d6aa8;
+}
+
+
+@media screen and (max-width: 600px) {
+    .search-container
+    {
+     display:none;
+    }
+    .search-container_mobile{
+    display:block;
+    width:100%;
+    margin-top: 10px;
+}
+button {
+    float: right;
+    padding: 15px 8px;
+    margin-top: 0px;
+    margin-right: 10%;
+    font-size: 17px;
+    background: #39424d;
+    border-left: none;
+    cursor: pointer;
+    width: 10%;
+}
+button:hover {
+  background: #ccc;
+   width:10%;
+}
+
+.search-container_mobile input[type=text] {
+    padding: 9px;
+    /*border-radius: 5px;*/
+    background: #505d6aa8;
+     width:80%;
+}
+}
+ </style>
+ 
  <div id="preloader">
             <div id="ctn-preloader" class="ctn-preloader">
                <div class="animation-preloader">
@@ -256,6 +316,14 @@
                            </div>
                            <div class="navbar__items-wrapper">
                                <div class="navbar__items">
+                                   
+                                   <div class="search-container">
+                                       <form action="https://zettagame.com/result_search.php" method="post" autocomplete="off">
+                                          <input type="text" placeholder="Search.." name="search" required>
+                                         <button type="search" aria-label="search games" title="search games"><i class="ti ti-search"></i></button>
+                                        </form>
+                                  </div>
+                                
                                  <?php
                                  $isLoggedIn = isset($_SESSION['user_email']) && !empty($_SESSION['user_email']);
                                  ?>
@@ -308,7 +376,14 @@
                                       </button>
                                     <?php endif; ?>
                              </div>
+                                   
                            </div>
+                           <div class="search-container_mobile">
+                                       <form action="https://zettagame.com/result_search.php" method="post" autocomplete="off">
+                                          <input type="text" placeholder="Search.." name="search" required>
+                                         <button type="search" aria-label="search games" title="search games"><i class="ti ti-search"></i></button>
+                                        </form>
+                                   </div>
                         </nav>
                      </div>
                   </div>
@@ -322,6 +397,7 @@
                         <!--   <img src="assets/images/logo.png" alt="Image">-->
                         <!--   </a>-->
                         <!--</div>-->
+                        
                         <button aria-label="close mobile menu" class="close-mobile-menu">
                         <i class="ti ti-x"></i>
                         </button>

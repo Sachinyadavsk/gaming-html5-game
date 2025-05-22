@@ -93,6 +93,7 @@
                            <li><a href="https://zettagame.com/privacy-policy">Privacy Policy</a></li>
                            <li><a href="https://zettagame.com/terms-conditions">| Terms & Conditions</a></li>
                             <li><a href="https://zettagame.com/disclaimer">| Disclaimer</a></li>
+                            <li><a href="https://zettagame.com/faq">| FaqS</a></li>
                         </ul>
                      </div>
                   </div>
@@ -102,3 +103,28 @@
       </div>
    </div>
 </footer>
+
+<style>
+    #read_more_section {
+  display: none;
+}
+div#read_more_section, h3 {
+    font-size: 24px !important;
+}
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script>
+    function myFunction() {
+        var section = document.getElementById("read_more_section");
+        var icon = document.getElementById("toggle_icon");
+
+        if (section.style.display === "none" || section.style.display === "") {
+            section.style.display = "block";
+            icon.innerHTML = "&#x25B2;"; // ▲ Up
+        } else {
+            section.style.display = "none";
+            icon.innerHTML = "&#x25BC;"; // ▼ Down
+        }
+    }
+</script>

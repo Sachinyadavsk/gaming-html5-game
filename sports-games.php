@@ -77,42 +77,37 @@
             </div>
          </section>
          <!-- ==== / trending games section end ==== -->
-         <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h4 class="header_pintrs_fours">CBC Football: A Legacy of Excellence in the Game</h4>
-                     <p class="content_layout_text"><b><a href="https://zettagame.com/arcade-games">CBC Football</a></b> is known for its rich history, competitive spirit, and dedication to developing top-tier athletes. Whether you're a fan or a player, the excitement around CBC Football continues to grow. From intense matchups to training with the best equipment, football remains one of the most thrilling <b>game in sports</b> history. Watching a match at a <b>sports bar games</b> venue with friends makes the experience even better. Fans eagerly follow their team’s performance with a <b>football countdown clock</b>, tracking every second leading up to game day. Players gear up with essential items, just like those found in <b>my backpack Carroll</b>, ensuring they’re ready for action. The future of CBC Football looks bright, as young talents emerge and take the game to new heights. With dedication, strategy, and passion, this football program continues to leave its mark. Stay tuned for more updates as the season unfolds! 🏈
-                     </p>
-                     <!--<h4 class="text-center">Google Ads</h4>-->
-                  </div>
+          <section class="secure pt-120 fade-wrapper">
+               <div class="container-fluid">
+                    <br>
+                 
+                    <div class="row">
+                        <div class="col-12">
+                            <br><br>
+                            <?php 
+                                $sql="select * from pageslay where pages='sports games' order by pageslay.id desc";
+                                $res=mysqli_query($con,$sql);
+                                $i=1;
+                                while($row=mysqli_fetch_assoc($res)){?>
+                    
+                            <h3 style="font-weight: 600;font-size: 36px;">
+                                <?php echo $row['title'];?>
+                            </h3>
+                            <p>
+                                <?php echo $row['des'];?>
+                            </p>
+                            <span class="text-success" style="margin-right: 6px;float: right !important; cursor: pointer;font-weight: 800;"
+                                    onclick="myFunction()"> Read More &nbsp; <i id="toggle_icon"></i></span>
+                            <div id="read_more_section">
+                                <?php echo $row['logdes'];?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                 
                </div>
-            </div>
-         </section>
-         <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h5 class="header_pintrs_fifth">Collections of Sports Games on Games</h5>
-                     <?php 
-                                      $sqlctn="select * from games where type='Sport_game' order by games.id";
-                                      $resctn=mysqli_query($con,$sqlctn);
-                                      $i=1;
-							                 while($rowctn=mysqli_fetch_assoc($resctn)){?>
-                     <h6 class="header_pintrs_six">
-                        <?php echo ucfirst($rowctn['name']);?> <img src="https://zettagame.com/images/games/<?php echo $rowctn['image']?>"
-                           alt="<?php echo $rowctn['name'];?>" style="height: 18px;width: 29px;"
-                           title="<?php echo $rowctn['name'];?>">
-                     </h6>
-                     <p class="content_layout_text">
-                        <?php echo $rowctn['short_desc'];?>
-                     </p>
-
-                     <?php $i++; } ?>
-                  </div>
-               </div>
-            </div>
-         </section>
+              
+            </section>
 
       </main>
       <!-- ==== / main content end ==== -->

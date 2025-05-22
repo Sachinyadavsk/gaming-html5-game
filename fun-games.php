@@ -77,42 +77,37 @@
          </section>
          <!-- ==== / trending games section end ==== -->
          <!-- ==== secure section start ==== -->
-         <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h4 class="header_pintrs_fours">Buddy Kicks: A Fun and Addictive Gaming Experience</h4>
-                     <p class="content_layout_text"><b><a href="https://zettagame.com/sports-games">Buddy Kicks</a></b> is an exciting and interactive game that lets players release stress by playfully kicking, punching, or using creative weapons on a virtual character. This game is perfect for those who enjoy engaging and casual gaming experiences similar to <b>fun carnival games and haha mini games</b>. With vibrant graphics and responsive controls, <b>Buddy Kicks</b> keeps players entertained for hours.
-                       If you love action-packed games, you might also enjoy <b>fun volleyball games</b>, where you can test your reflexes, or explore <b>co gamer</b> platforms for more interactive challenges. Whether you're playing for fun or to relieve stress, <b>Buddy Kicks</b> delivers a unique and entertaining experience. Try it today and unleash your creativity in this thrilling virtual world! 🎮🔥</p>
-                     <!--<h4 class="text-center">Google Ads</h4>-->
-                  </div>
+        <section class="secure pt-120 fade-wrapper">
+               <div class="container-fluid">
+                    <br>
+                 
+                    <div class="row">
+                        <div class="col-12">
+                            <br><br>
+                            <?php 
+                                $sql="select * from pageslay where pages='fun games' order by pageslay.id desc";
+                                $res=mysqli_query($con,$sql);
+                                $i=1;
+                                while($row=mysqli_fetch_assoc($res)){?>
+                    
+                            <h3 style="font-weight: 600;font-size: 36px;">
+                                <?php echo $row['title'];?>
+                            </h3>
+                            <p>
+                                <?php echo $row['des'];?>
+                            </p>
+                            <span class="text-success" style="margin-right: 6px;float: right !important; cursor: pointer;font-weight: 800;"
+                                    onclick="myFunction()"> Read More &nbsp; <i id="toggle_icon"></i></span>
+                            <div id="read_more_section">
+                                <?php echo $row['logdes'];?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                 
                </div>
-            </div>
-         </section>
-         <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h5 class="header_pintrs_fifth">Top Puzzle Games Online For Free On Games</h5>
-                     <?php 
-                                      $sqlctn="select * from games where type='Fun_game' and status='1' order by games.id";
-                                      $resctn=mysqli_query($con,$sqlctn);
-                                      $i=1;
-							                 while($rowctn=mysqli_fetch_assoc($resctn)){?>
-                     <h6 class="header_pintrs_six">
-                        <?php echo ucfirst($rowctn['name']);?> <img src="https://zettagame.com/images/games/<?php echo $rowctn['image']?>"
-                           alt="<?php echo $rowctn['name'];?>" style="height: 18px;width: 29px;"
-                           title="<?php echo $rowctn['name'];?>">
-                     </h6>
-                     <p class="content_layout_text">
-                        <?php echo $rowctn['short_desc'];?>
-                     </p>
-
-                     <?php $i++; } ?>
-                  </div>
-               </div>
-            </div>
-         </section>
+              
+            </section>
          <!-- ==== / secure section end ==== -->
 
       </main>

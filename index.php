@@ -1,5 +1,9 @@
 <?php include('confige.php');?>
 <?php
+require_once "vendor/autoload.php";
+use Amp\Loop;
+use Amp\Parallel\Worker\CallableTask;
+use Amp\Parallel\Worker\DefaultWorkerFactory;
 session_start();
 ?>
 <!DOCTYPE html>
@@ -9,13 +13,50 @@ session_start();
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+       <meta name="robots" content="index, follow">
       <!-- #favicon -->
       <link rel="shortcut icon" href="https://zettagame.com/assets/images/favicon.png" type="image/x-icon">
       <link rel="stylesheet" href="https://zettagame.com/assets/css/main.css">
       <meta name="google-site-verification" content="AKKInmlx0DYDhngp984Zxtb4uKnzXuujoJ0rNUTH4bg" />
       <link rel="canonical" href="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
       <meta property="og:url" content="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+       <link rel="alternate" hreflang="en-us" href="https://zettagame.com/us/" />
+        <link rel="alternate" hreflang="en-gb" href="https://zettagame.com/uk/" />
+        <link rel="alternate" hreflang="en-in" href="https://zettagame.com/in/" />
+        <link rel="alternate" hreflang="x-default" href="https://zettagame.com/" />
+        
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Review",
+              "itemReviewed": {
+                "@type": "VideoGame",
+                "name": "zettagame",
+                "author": {
+                  "@type": "Organization",
+                  "name": "zettagame"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "zettagame"
+                },
+                "genre": "Action-Adventure",
+                "url": "<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Pankaj"
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.6",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "reviewBody": "GTA VI offers a vast open-world experience, stunning graphics, and deeply immersive storytelling. A solid upgrade from previous titles.",
+              "datePublished": "2025-03-09"
+            }
+        </script>
       <!-- #title -->
       <?php           
           include('confige.php');
@@ -27,7 +68,40 @@ session_start();
              foreach($game_arr4 as $list){
                  echo htmlspecialchars_decode($list['data']);
             }?>
+            
+             <?php
+                function zettagame_breadcrumbs() {
+                    // Home URL
+                    echo '<nav aria-label="breadcrumb">';
+                    echo '<ul class="breadcrumb">';
+                    echo '<li><a href="'.home_url().'">Home</a></li> &gt; ';
+                
+                    if (is_category() || is_single()) {
+                        $category = get_the_category();
+                        if (!empty($category)) {
+                            echo '<li><a href="'.get_category_link($category[0]->term_id).'">'.$category[0]->name.'</a></li> &gt; ';
+                        }
+                        if (is_single()) {
+                            echo '<li>'.get_the_title().'</li>';
+                        }
+                    } elseif (is_page() && !is_front_page()) {
+                        echo '<li>'.get_the_title().'</li>';
+                    } elseif (is_search()) {
+                        echo '<li>Search results for: "'.get_search_query().'"</li>';
+                    } elseif (is_404()) {
+                        echo '<li>404 - Page Not Found</li>';
+                    }
+                    
+                    echo '</ul>';
+                    echo '</nav>';
+                }
+             ?>
    </head>
+     <style>
+        #read_more_section {
+            display: none; /* Hidden by default */
+        }
+    </style>
       <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -48,6 +122,7 @@ session_start();
       }
     }
     </script>
+    
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3BKZXB6DSF"></script>
         <script>
@@ -61,7 +136,7 @@ session_start();
        // Function to check and request notification permission
             function requestNotificationPermission() {
                 if (!("Notification" in window)) {
-                    alert("This browser does not support desktop notifications.");
+                    // alert("This browser does not support desktop notifications.");
                     return;
                 }
             
@@ -73,7 +148,7 @@ session_start();
                         sendNotification();
                     } else if (permission === "denied") {
                         console.log("User blocked notifications.");
-                        alert("You have blocked notifications. To enable them, change settings in your browser.");
+                        // alert("You have blocked notifications. To enable them, change settings in your browser.");
                     }
                 });
             }
@@ -123,8 +198,8 @@ session_start();
     </script>
    <body>
        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTVQF8VQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTVQF8VQ"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
       <div class="nftg-app a-cursor ">
             <?php include('header.php');?>
@@ -260,14 +335,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                      </div>
                      <br>
-                     <div class="row">
-                        <div class="col-12">
-                                 <h3 style="font-weight: 600;font-size: 36px;">Best Hentai Games: Top Picks for Anime Fans</h3>
-                                 <p>The world of <b>best hentai games</b> offers immersive experiences with captivating storylines, stunning anime artwork, and interactive gameplay. From visual novels to adventure-based titles, these games cater to a wide range of preferences. Popular choices include the <b>Rapelay game</b>, known for its controversial themes, and the <b>Omegle game</b>, which brings an interactive twist inspired by anonymous chat experiences. Fantasy lovers might enjoy <b>The Wishing Game</b>, while those intrigued by internet culture can explore <b>Rule 34 games</b>. Meanwhile, casual gamers can also find entertainment in titles like <b>Buzzr games, Looney Tunes Blocks Game</b>, and <b>Children’s Card Games</b>. Psychological game lovers may appreciate <b>Mind Games Cologne</b>, and for those seeking unique physics-based challenges, <b>Trampoline Games</b> provide an engaging alternative. Whether you're a seasoned player or new to the genre, exploring the <b> <a href="https://zettagame.com/games/physicsplayground"> best hentai games</a></b> offers a thrilling experience. Always play responsibly and choose games that suit your taste! 🎮
-                                  </p>
+                     
+                        <div class="row">
+                            <div class="col-12">
+                                <br><br>
+                                <?php 
+                                    $sql="select * from pageslay where pages='home' order by pageslay.id desc";
+                                    $res=mysqli_query($con,$sql);
+                                    $i=1;
+                                    while($row=mysqli_fetch_assoc($res)){?>
+                        
+                                <h3 style="font-weight: 600;font-size: 36px;">
+                                    <?php echo $row['title'];?>
+                                </h3>
+                                <p>
+                                    <?php echo $row['des'];?>
+                                </p>
+                                <span class="text-success" style="margin-right: 6px;float: right !important; cursor: pointer;font-weight: 800;"
+                                    onclick="myFunction()"> Read More &nbsp; <i id="toggle_icon"></i></span>
+                                <div id="read_more_section">
+                                    <?php echo $row['logdes'];?>
+                                </div>
+                                <?php } ?>
+                            </div>
                         </div>
-                     </div>
+                     
                   </div>
+                  
                </section>
                
                <!-- ==== / cta section end ==== -->

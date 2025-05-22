@@ -77,44 +77,36 @@
          </section>
          <!-- ==== / trending games section end ==== -->
          <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h4 class="header_pintrs_fours">Free Windows Car Racing Game Reviews: Top Picks for Racing Enthusiasts</h4>
-                     <p class="content_layout_text">If you love high-speed action, <b><a href="https://zettagame.com/">free Windows car racing game reviews</a></b> can help you find the best games for an adrenaline rush. Many <b>free car games for kids offer fun</b>, family-friendly gameplay, while others focus on realistic driving physics. Popular picks include Asphalt 9: Legends for arcade-style racing, Forza Street for a realistic experience, and TrackMania Nations Forever for speed enthusiasts.<br>
-                                                    For those interested in variety, racing genres extend beyond cars. Fans of <b>horse racing games</b> can try Virtual Horse Racing 3D, while <b>dirt bike games</b> lovers may enjoy MX Simulator. These games provide unique challenges and engaging mechanics.<br>
-                                                    Whether you prefer classic car races or alternative options like <b>horse racing games</b>, Windows offers countless free games to enjoy. Download your favorite and hit the virtual tracks today! 🚗💨
-
-                     </p>
-                     <!--<h4 class="text-center">Google Ads</h4>-->
-                  </div>
+               <div class="container-fluid">
+                    <br>
+                 
+                    <div class="row">
+                        <div class="col-12">
+                            <br><br>
+                            <?php 
+                                $sql="select * from pageslay where pages='racing games' order by pageslay.id desc";
+                                $res=mysqli_query($con,$sql);
+                                $i=1;
+                                while($row=mysqli_fetch_assoc($res)){?>
+                    
+                            <h3 style="font-weight: 600;font-size: 36px;">
+                                <?php echo $row['title'];?>
+                            </h3>
+                            <p>
+                                <?php echo $row['des'];?>
+                            </p>
+                             <span class="text-success" style="margin-right: 6px;float: right !important; cursor: pointer;font-weight: 800;"
+                                    onclick="myFunction()"> Read More &nbsp; <i id="toggle_icon"></i></span>
+                            <div id="read_more_section">
+                                <?php echo $row['logdes'];?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                 
                </div>
-            </div>
-         </section>
-         <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h5 class="header_pintrs_fifth">Collections of Racing Games on Games</h5>
-                     <?php 
-                                      $sqlctn="select * from games where type='Racing_game' and status='1' order by games.id";
-                                      $resctn=mysqli_query($con,$sqlctn);
-                                      $i=1;
-							                 while($rowctn=mysqli_fetch_assoc($resctn)){?>
-                     <h6 class="header_pintrs_six">
-                        <?php echo ucfirst($rowctn['name']);?> <img src="https://zettagame.com/images/games/<?php echo $rowctn['image']?>"
-                           alt="<?php echo $rowctn['name'];?>" style="height: 18px;width: 29px;"
-                           title="<?php echo $rowctn['name'];?>">
-                     </h6>
-                     <p class="content_layout_text">
-                        <?php echo $rowctn['short_desc'];?>
-                     </p>
-
-                     <?php $i++; } ?>
-                  </div>
-               </div>
-            </div>
-         </section>
+              
+            </section>
 
       </main>
       <!-- ==== / main content end ==== -->

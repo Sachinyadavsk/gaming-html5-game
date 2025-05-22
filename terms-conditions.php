@@ -56,77 +56,44 @@
                                       <h1>Terms & Conditions</h1>
                                    </div>
                                  <div class="details__content">
-                                    <p>Welcome to zettagame.com ("the Website"). These  <a href="https://zettagame.com/about-us" style="color:blue">Terms and Conditions</a> apply to all access and use of the Website ("Terms"). Please read them carefully before proceeding. This Website should not be used by those who do not agree with these Terms.
+                                    <p>Welcome to Zettagame <a href="https://zettagame.com/about-us" style="color:blue"> By gaining access to and the use of our website</a>offerings, and merchandise, you agree to comply with and be certain by way of the following Terms & Conditions. Please read them cautiously before intending.
                                     </p>
                                     <h3 class="fw-6">1. Acceptance of Terms</h3>
-                                    <p>By creating an account, accessing, or using any part of the Website, you confirm that:</p>
-                                    <ul>
-                                        <li>(1) You are at least 18 years old or have parental/guardian consent to use the Website.</li>
-                                        <li>(2) You have the legal capacity to enter into this agreement.</li>
-                                        <li>(3) You will comply with all applicable laws and regulations when using the Website</li>
-                                    </ul>
-                                    
-                                  
-                                     <h3 class="fw-6 mt-2">2. Description of Services</h3>
-                                     <p>The Website provides users with access to gaming services, rewards, and related content. Specific terms may apply to individual games or promotions,
-                                     and you agree to abide by those additional rules when participating.</p>
+                                    <p>By getting access to Zettagame, you renowned that you have read, understood, and agreed to those terms. If you do now not accept as true with any a part of these phrases, please do now not use our services.</p>
+                                     <h3 class="fw-6 mt-2">2. Eligibility</h3>
+                                     <p>You must be as a minimum 18 years antique to use our services. By the usage of Zettagame, you confirm that you meet this requirement.</p>
                                      
                                      <h3 class="fw-6 mt-2">3. User Accounts</h3>
                                      <ul>
-                                        <li>(1) To access certain features, you may be required to register for an account.</li>
-                                        <li>(2) You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.</li>
-                                        <li>(3) The Website reserves the right to suspend or terminate accounts that violate these Terms or engage in fraudulent or abusive activities.</li>
+                                        <li>(1) You may be required to create an account to get right of entry to positive features.</li>
+                                        <li>(2) You are responsible for keeping the confidentiality of your account info.</li>
+                                        <li>(3) Zettagame isn't always accountable for any unauthorized access in your account.</li>
                                     </ul>
                                     
-                                     <h3 class="fw-6 mt-2">4. Earning and Redeeming Rewards</h3>
+                                     <h3 class="fw-6 mt-2">4. Use of Services</h3>
                                     <ul>
-                                        <li>(1) Users may earn rewards (e.g., points, tokens, or credits) by participating in activities on the Website.</li>
-                                        <li>(2) Rewards cannot be transferred, sold, or exchanged for cash unless explicitly stated.</li>
-                                        <li>(3) The Website reserves the right to modify or discontinue reward programs at any time without prior notice</li>
+                                        <li>(1) You agree to apply Zettagame in a lawful way.</li>
+                                        <li>(2) You shall not have interaction in any pastime which could disrupt or damage our platform.</li>
+                                        <li>(3) Any fraudulent, abusive, or illegal hobby may result in termination of your account.</li>
                                     </ul>
                                     
-                                    <h3 class="fw-6 mt-2">5. Prohibited Activities</h3>
-                                    <p>You agree not to:</p>
+                                    <h3 class="fw-6 mt-2">5. Intellectual Property</h3>
+                                    <p>All content, including however not confined to images, emblems, and game designs, are the belongings of Zettagame. Unauthorized use, reproduction, or distribution is illegal.</p>
+                                    <h3 class="fw-6 mt-2">6. Purchases & Payments</h3>
                                      <ul>
-                                        <li>(1) Use the Website for any unlawful or unauthorized purpose.</li>
-                                        <li>(2) Engage in cheating, hacking, or other manipulative activities that undermine the integrity of the platform.</li>
-                                        <li>(3) Submit false or misleading information when registering or participating in activities.</li>
-                                        <li>(4) Attempt to disrupt the Website's functionality, including introducing malware, exploiting vulnerabilities, or overloading servers.</li>
+                                        <li>(1) All purchases made on Zettagame are very last and non-refundable until said in any other case.</li>
+                                        <li>(2) Zettagame reserves the right to alter pricing, charge terms, and refund guidelines at any time.</li>
                                     </ul>
-                                    
-                                    <h3 class="fw-6 mt-2">6. Intellectual Property</h3>
-                                     <ul>
-                                        <li>(1) All content, including but not limited to text, graphics, logos, and software, is the property of zettagame.com or its licensors.</li>
-                                        <li>(2) Users are granted a limited, non-exclusive, non-transferable license to access and use the Website for personal purposes only.</li>
-                                        <li>(3) Any unauthorized use, reproduction, or distribution of content is strictly prohibited.</li>
-                                    </ul>
-                                    
-                                    <h3 class="fw-6 mt-2">7. Disclaimer of Warranties</h3>
-                                    <p>The Website and its services are provided "as is" and "as available" without any warranties of any kind, either express or implied.</p>
-                                     <ul>
-                                        <li>(1) The Website does not guarantee uninterrupted or error-free operation.</li>
-                                        <li>(2) The Website is not responsible for any loss of data, rewards, or other damages resulting from technical issues or user error.</li>
-                                    </ul>
-                                    
-                                     <h3 class="fw-6 mt-2">8. Limitation of Liability</h3>
-                                     <p>To the maximum extent permitted by law, zettagame.com and its affiliates are not liable for any indirect, incidental, special, or consequential damages arising from:</p>
-                                      <ul>
-                                        <li>(1) Your use or inability to use the Website.</li>
-                                        <li>(2) Unauthorized access to your account or data.</li>
-                                        <li>(3) Errors, bugs, or downtime on the Website..</li>
-                                    </ul>
-                                    
-                                     <h3 class="fw-6 mt-2">9. Modification of Terms</h3>
-                                     <p>The Website reserves the right to modify these Terms at any time. Changes will take effect upon being posted on this page. It is your responsibility to review these Terms periodically for updates.</p>
-                                    
-                                     <h3 class="fw-6">10. Termination</h3>
-                                     <p>The Website reserves the right to suspend or terminate your access at its sole discretion, with or without notice, for violations of these Terms or any other reason deemed necessary.</p>
-                                     
-                                      <h3 class="fw-6">11. Governing Law</h3>
-                                      <p>These Terms and any disputes arising from your use of the Website are governed by the laws of without regard to conflict of laws principles..</p>
-                                      
-                                       <h3 class="fw-6">12. Contact Us</h3>
-                                     <p>If you have any questions about these Terms, please contact us at:</p>
+                                    <h3 class="fw-6 mt-2">7. Limitation of Liability</h3>
+                                    <p>Zettagame shall now not be responsible for any direct, oblique, incidental, or consequential damages arising from the usage of our offerings.</p>
+                                     <h3 class="fw-6 mt-2">8. Termination</h3>
+                                     <p>We reserve the right to suspend or terminate your access to Zettagame at our sole discretion, with or without be aware, for any violation of these terms.</p>
+                                     <h3 class="fw-6 mt-2">9. Privacy Policy</h3>
+                                     <p>Your use of Zettagame is also governed by means of our Privacy Policy. Please review it to recognize how we gather, use, and shield your statistics.</p>
+                                     <h3 class="fw-6">10. Changes to Terms & Conditions</h3>
+                                     <p>Zettagame reserves the right to alter those Terms & Conditions at any time. Changes may be powerful without delay upon posting on our internet site.</p>
+                                       <h3 class="fw-6">11. Contact Information</h3>
+                                     <p>For any questions or worries concerning these Terms & Conditions, please contact us at </p>
                                     <ul>
                                         <li>(1) Email: <a href="mailto:info@zettamobi.com">info@zettamobi.com</a></li>
                                         <li>(2) Address: Sector 63, Noida, Uttar Pradesh 201301</li>

@@ -56,26 +56,21 @@
                                          <h1>About Us</h1>
                                    </div>
                                  <div class="details__content">
-                                    <p>Welcome to game zettagame your ultimate destination for everything gaming! Whether you're a hardcore gamer,
-                                    a casual player, or just stepping into the exciting world of gaming, we are here to elevate your experience.
-                                    <br>At game zettagame, we live and breathe gaming. Founded by passionate gamers, our mission is to build a vibrant
-                                    community where players of all levels can come together, discover new games, improve their skills, and stay updated 
-                                    with the latest trends in the gaming industry.</p>
+                                    <p>At Zettagame, we're obsessed with handing during the last gaming session. Whether you're a casual player or a hardcore gamer, we try to create a dynamic platform that caters to all gaming fanatics.</p>
+                                    <h3 class="fw-6">Who We Are</h3>
+                                    <p>Zettagame is a hub for gamers, builders, and content material creators who have a love for immersive gameplay, contemporary generation, and a thriving gaming community. Our purpose is to redefine the gaming panorama with the resource of providing enticing content, the current game releases, professional evaluations, and interactive skills that preserve you in advance within the gaming global.</p>
                                     <h3 class="fw-6">What We Offer</h3>
                                     <ul>
-                                        <li><b>(1) Latest Gaming News:</b> Stay informed with breaking news, updates, and developments from the gaming world.</li>
-                                        <li><b>(2) Game Reviews and Previews:</b> Get honest, in-depth reviews and sneak peeks at the hottest new releases.</li>
-                                        <li><b>(3) Gaming Guides:</b> Improve your gameplay with detailed tips, walkthroughs, and tutorials for all your favorite titles.</li>
-                                        <li><b>(4) Community Interaction:</b> Connect with like-minded gamers, share strategies, and engage in lively discussions.</li>
-                                        <li><b>(5) Esports Coverage:</b> Follow your favorite teams, tournaments, and players from the rapidly growing world of competitive gaming.</li>
+                                        <li><b>(1) Latest Game News & Reviews:</b>  – Stay up to date with in-depth analysis and honest critiques of trending video video games.</li>
+                                        <li><b>(2) Gaming Community:</b>  – Connect with like-minded gamers, proportion research, and take part in discussions.</li>
+                                        <li><b>(3) Exclusive Content:</b> – Explore recreation guides, tutorials, and seasoned pointers to degree up your capabilities.</li>
+                                        <li><b>(4) Innovative Gaming Solutions:</b> – Discover new equipment, mods, and improvements that take your gaming experience to the subsequent diploma.</li>
                                     </ul>
                                     
-                                    <h3 class="fw-6">Why Choose Us?</h3>
-                                    <p>We are more than just a website; we are a community driven by a love for gaming. With a team of dedicated writers, content creators, 
-                                    and gaming experts, we strive to provide high-quality content tailored to gamers' interests. </p>
-                                    <h3 class="fw-6">Join the Adventure</h3>
-                                    <p>Gaming is not just a hobby; it’s a lifestyle, and we’re here to celebrate it with you. Whether you're looking for the latest news,
-                                        <a href="https://zettagame.com/contact-us" style="color:blue">game recommendations</a>, or a space to connect with fellow enthusiasts, game zettagame is your one-stop hub for everything gaming.</p>
+                                    <h3 class="fw-6">Our Vision</h3>
+                                    <p>We take delivery of as proper with gaming is greater than virtually enjoyment—it’s a way of life. Our challenge is to create a location wherein gamers can research, engage, and develop collectively. With a sturdy determination to superb and innovation, we intention to be the bypass-to platform for every gaming enthusiast.</p>
+                                    <h3 class="fw-6">Join the Zettagame Community</h3>
+                                    <p>Are you geared up to elevate your gaming journey? <a href="https://zettagame.com/contact-us" style="color:blue">Be a part of the Zettagame</a>revel in and immerse yourself in a global of limitless possibilities.</p>
                                  </div>
                               </div>
                              

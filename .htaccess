@@ -24,7 +24,7 @@ RewriteRule ^forget-password-submit$ forget-password-submit.php
 RewriteRule ^logout$ logout.php
 RewriteRule ^reset-password/([^/\.]+)?$ reset-password.php?token=$1 [L]
 RewriteRule ^reset-password/([a-f0-9]{32})/?$ reset-password.php [L]
-
+RewriteRule ^(us|uk|in)/?$ index.php [L]
 
 RewriteRule ^listing$ listing.php
 RewriteRule ^(puzzle-games)/?$ puzzle-games.php
@@ -38,6 +38,7 @@ RewriteRule ^(racing-games)/?$ racing-games.php
 RewriteRule ^(privacy-policy)/?$ privacy-policy.php
 RewriteRule ^(terms-conditions)/?$ terms-conditions.php
 RewriteRule ^(disclaimer)/?$ disclaimer.php
+RewriteRule ^(faq)/?$ faqs.php
 RewriteRule ^(contact-us)/?$ contact-us.php
 RewriteRule ^(about-us)/?$ about-us.php
 RewriteRule ^(blog)/?$ blog.php

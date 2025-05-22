@@ -76,43 +76,36 @@
          </section>
          <!-- ==== / trending games section end ==== -->
          <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h4 class="header_pintrs_fours">Card Games for 3 People: Fun and Engaging Options</h4>
-                     <p class="content_layout_text">Finding the perfect <b><a href="https://zettagame.com/racing-games">card games for 3 people</a></b> can be a challenge, but there are plenty of exciting options to enjoy with friends or family. Whether you're using the <b>best pack of cards</b> or a specialized deck, three-player games provide endless entertainment.
-                        Popular choices include <b>Rummy</b>, where players form sets and sequences, and <b>Spades</b>, a trick-taking game that requires strategic thinking. If you're looking for something quick and light, <b>Crazy Eights</b> is a fantastic choice. For those who love traditional <b>family playing card games, Go Fish and Uno</b> are great options that work well with three players.
-                        Playing cards is a wonderful way to bond, whether using standard decks or themed <b>world cards</b>. The next time you're looking for an engaging activity, grab a deck and enjoy one of these fantastic <b>card games for 3 people!</b> ♠️♥️♣️♦️
-                     </p>
-                     <!--<h4 class="text-center">Google Ads</h4>-->
-                  </div>
+               <div class="container-fluid">
+                    <br>
+                 
+                    <div class="row">
+                        <div class="col-12">
+                            <br><br>
+                            <?php 
+                                $sql="select * from pageslay where pages='card games' order by pageslay.id desc";
+                                $res=mysqli_query($con,$sql);
+                                $i=1;
+                                while($row=mysqli_fetch_assoc($res)){?>
+                    
+                            <h3 style="font-weight: 600;font-size: 36px;">
+                                <?php echo $row['title'];?>
+                            </h3>
+                            <p>
+                                <?php echo $row['des'];?>
+                            </p>
+                             <span class="text-success" style="margin-right: 6px;float: right !important; cursor: pointer;font-weight: 800;"
+                                    onclick="myFunction()"> Read More &nbsp; <i id="toggle_icon"></i></span>
+                            <div id="read_more_section">
+                                <?php echo $row['logdes'];?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                 
                </div>
-            </div>
-         </section>
-         <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h5 class="header_pintrs_fifth">Collections of Card Games on Games</h5>
-                     <?php 
-                                      $sqlctn="select * from games where type='Card_game' and status='1' order by games.id";
-                                      $resctn=mysqli_query($con,$sqlctn);
-                                      $i=1;
-							                 while($rowctn=mysqli_fetch_assoc($resctn)){?>
-                     <h6 class="header_pintrs_six">
-                        <?php echo ucfirst($rowctn['name']);?> <img src="https://zettagame.com/images/games/<?php echo $rowctn['image']?>"
-                           alt="<?php echo $rowctn['name'];?>" style="height: 18px;width: 29px;"
-                           title="<?php echo $rowctn['name'];?>">
-                     </h6>
-                     <p class="content_layout_text">
-                        <?php echo $rowctn['short_desc'];?>
-                     </p>
-
-                     <?php $i++; } ?>
-                  </div>
-               </div>
-            </div>
-         </section>
+              
+            </section>
 
       </main>
       <!-- ==== / main content end ==== -->

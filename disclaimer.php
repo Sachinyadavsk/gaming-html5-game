@@ -56,42 +56,23 @@
                                       <h1>Disclaimer</h1>
                                    </div>
                                  <div class="details__content">
-                                    <p>Welcome to <a href="https://zettagame.com/" style="color:blue">zettagame.com</a> By accessing and using this Website, you agree to the terms outlined in this Disclaimer. If you do not agree, please discontinue use of the Website immediately.</p>
-                                    
+                                    <p>Welcome to <a href="https://zettagame.com/" style="color:blue">Zettagame</a>By the usage of our internet site, you acknowledge and conform to the terms mentioned on this disclaimer. If you do no longer agree with any part of this disclaimer, please refrain from the use of our website.</p>
                                     <h3 class="fw-6">General Information</h3>
-                                    <p>The information provided on this Website is for general informational and entertainment purposes only. While we strive to keep the content accurate and up-to-date, we make no guarantees regarding the completeness,
-                                    reliability, or accuracy of the information displayed. Use of any information or materials from this Website is entirely at your own risk.</p>
-                                    <p><b>Gaming and Rewards</b></p>
-                                    <ul>
-                                        <li><b>(1) Earnings and Rewards Disclaimer:</b><br>Any rewards, points, or other benefits earned through the games or services on this Website are subject to specific terms and conditions. Participation does not guarantee earnings or winnings, and outcomes may vary based on user performance, engagement, or other factors.</li>
-                                        <li class="mt-2"><b>(2) Fair Use and Compliance:</b><br>All users must ensure compliance with applicable laws and regulations in their respective jurisdictions when using the Website. The Website is not responsible for any legal issues that may arise due to a user’s failure to comply with such laws.</li>
-                                    </ul>
-                                    
-                                     <h3 class="fw-6 mt-2">Third-Party Links and Services</h3>
-                                     <p>The Website may contain links to third-party websites or services for user convenience. We have no control over the content, nature, or availability of these external sites and do not endorse or assume responsibility for them. Accessing such links is at your own discretion and risk.</p>
-                                     
-                                     <h3 class="fw-6 mt-2">Limitation of Liability</h3>
-                                     <p>To the fullest extent permitted by law,  <a href="https://zettagame.com/" style="color:blue">zettagame.com</a> disclaims all liability for any losses, damages, or expenses incurred by users as a result of:</p>
-                                     <ul>
-                                        <li>(1) Participation in games or activities on the Website.</li>
-                                        <li>(2) Inaccuracies or omissions in Website content.</li>
-                                        <li>(3) Technical issues, such as downtime, interruptions, or errors.</li>
-                                    </ul>
-                                    
+                                    <p>The content material supplied on Zettagame is for informational and leisure purposes handiest. While we attempt to make certain accuracy, we do no longer assure the completeness, reliability, or validity of any information on this web page. Your use of any content is solely at your very own chance.</p>
                                      <h3 class="fw-6 mt-2">No Professional Advice</h3>
-                                   <p>The information provided on this Website does not constitute legal, financial, or professional advice. Users should seek appropriate counsel or guidance for specific concerns or questions.</p>
-                                    
-                                    <h3 class="fw-6 mt-2">Updates and Changes</h3>
-                                    <p>We reserve the right to update or modify this Disclaimer at any time without prior notice. It is the user’s responsibility to review this page periodically for changes. Continued use of the Website constitutes acceptance of any updated terms.</p>
+                                     <p>The information in this internet site should not be taken into consideration professional, economic, felony, or technical advice. If you require specific recommendation, we suggest consulting a qualified expert inside the relevant field.</p>
                                      
-                                      
+                                     <h3 class="fw-6 mt-2">External Links Disclaimer</h3>
+                                   <p>Our internet site may additionally include hyperlinks to 1/3-celebration web sites. We do not control or advocate the content of these websites and are not chargeable for their accuracy, reliability, or guidelines. Visiting outside hyperlinks is at your very own discretion.</p>
+                                    
+                                    <h3 class="fw-6 mt-2">Limitation of Liability</h3>
+                                    <p>Under no circumstances shall Zettagame, its proprietors, affiliates, or employees be accountable for any direct, indirect, incidental, or consequential damages springing up out of your use of this internet site.</p>
+                                     <h3 class="fw-6 mt-2">Copyright & Fair Use</h3>
+                                     <p>All content material, inclusive of textual content, images, and multimedia, is the assets of Zettagame until otherwise said. Unauthorized use, replica, or distribution of our content material is against the law. If you consider any content violates copyright laws, please touch us for resolution.</p>
+                                      <h3 class="fw-6 mt-2">Changes to This Disclaimer</h3>
+                                      <p>We reserve the proper to replace or modify this disclaimer at any time without prior note. Continued use of this website after changes are published constitutes popularity of the revised terms.</p>
                                        <h3 class="fw-6">Contact Us</h3>
-                                     <p>If you have any questions or concerns about this Disclaimer, feel free to contact us at:</p>
-                                    <ul>
-                                        <li>(1) Email: <a href="mailto:info@zettamobi.com" style="color:blue">info@zettamobi.com</a></li>
-                                        <li>(2) Address: Sector 63, Noida, Uttar Pradesh 201301</li>
-                                    </ul>
-                                    <p>By using <a href="https://zettagame.com/">zettagame.com</a> you acknowledge and agree to this Disclaimer. Thank you for understanding and using our services responsibly!</p>
+                                     <p>If you have got any questions on this disclaimer, please touch us at info@zettamobi.com.</p>
                                  </div>
                               </div>
                              

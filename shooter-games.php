@@ -77,41 +77,36 @@
          </section>
          <!-- ==== / trending games section end ==== -->
          <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h4 class="header_pintrs_fours">What Can I Say Besides Shooting Games? Exploring Fun Alternatives</h4>
-                     <p class="content_layout_text">If you're wondering, <b><a href="https://zettagame.com/card-games">what can I say besides shooting games,</a></b> there are plenty of exciting alternatives to explore. While <b>gun games unblocked and 3 person shooter games</b> are popular, you can try other action-packed genres that offer the same thrill. Games like <b>racing simulators, strategy-based war games, and survival adventures</b> provide intense gameplay without relying solely on shooting mechanics. If you still enjoy aiming challenges, you can explore <b>shooting game</b> targets in archery or sports-based target games. For Chromebook users, <b>play online shooter for Chromebooks</b> offers browser-friendly action games, including futuristic combat and multiplayer battle arenas. Puzzle-based RPGs, open-world exploration, and battle royale survival games can also provide engaging experiences with strategic depth. Whether you're looking for adrenaline-pumping action or immersive storytelling, there are countless gaming options beyond traditional shooters. Explore different genres and find the perfect game that keeps you entertained! 🎮
-                     </p>
-                     <!--<h4 class="text-center">Google Ads</h4>-->
-                  </div>
+               <div class="container-fluid">
+                    <br>
+                 
+                    <div class="row">
+                        <div class="col-12">
+                            <br><br>
+                            <?php 
+                                $sql="select * from pageslay where pages='shooter games' order by pageslay.id desc";
+                                $res=mysqli_query($con,$sql);
+                                $i=1;
+                                while($row=mysqli_fetch_assoc($res)){?>
+                    
+                            <h3 style="font-weight: 600;font-size: 36px;">
+                                <?php echo $row['title'];?>
+                            </h3>
+                            <p>
+                                <?php echo $row['des'];?>
+                            </p>
+                             <span class="text-success" style="margin-right: 6px;float: right !important; cursor: pointer;font-weight: 800;"
+                                    onclick="myFunction()"> Read More &nbsp; <i id="toggle_icon"></i></span>
+                            <div id="read_more_section">
+                                <?php echo $row['logdes'];?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                 
                </div>
-            </div>
-         </section>
-         <section class="secure pt-120 fade-wrapper">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-12 col-xl-12 fade-top">
-                     <h5 class="header_pintrs_fifth">Collections of Shooter Games on Games</h5>
-                     <?php 
-                                      $sqlctn="select * from games where type='Shooter_game' and status='1' order by games.id";
-                                      $resctn=mysqli_query($con,$sqlctn);
-                                      $i=1;
-							                 while($rowctn=mysqli_fetch_assoc($resctn)){?>
-                     <h6 class="header_pintrs_six">
-                        <?php echo ucfirst($rowctn['name']);?> <img src="https://zettagame.com/images/games/<?php echo $rowctn['image']?>"
-                           alt="<?php echo $rowctn['name'];?>" style="height: 18px;width: 29px;"
-                           title="<?php echo $rowctn['name'];?>">
-                     </h6>
-                     <p class="content_layout_text">
-                        <?php echo $rowctn['short_desc'];?>
-                     </p>
-
-                     <?php $i++; } ?>
-                  </div>
-               </div>
-            </div>
-         </section>
+              
+            </section>
 
       </main>
       <!-- ==== / main content end ==== -->
